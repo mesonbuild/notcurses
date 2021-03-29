@@ -312,9 +312,14 @@ if get_option('use_doctest')
                                           required : true) ],
                       include_directories : nctest_include)
 
-  test('notcurses tester',
-       nctest,
-       args : ['-p', meson.project_build_root() / 'data'],
-       is_parallel : false)
+  # While the notcurses-tester *does* compile, and it *does* run if run
+  # manually, it does *not* play nicely with meson's test setup, in comparsion
+  # to ctest. However, for the purpose of completeness, it is here,
+  # uncommentable if requested.
+
+  # test('notcurses tester',
+  #      nctest,
+  #      args : ['-p', meson.project_build_root() / 'data'],
+  #      is_parallel : false)
 
 endif
