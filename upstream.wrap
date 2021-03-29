@@ -1,0 +1,14 @@
+[wrap-file]
+
+directory = notcurses-2.2.4
+
+source_url = https://github.com/dankamongmen/notcurses/archive/refs/tags/v2.2.4.tar.gz
+source_filename = v2.2.4.tar.gz
+source_hash = f062b4a86ab61e800c8754cd36af557f41ac8a015e3fe3921dab1ed37c665394
+
+[provide]
+notcurses_core = notcurses_core_dep
+notcurses = notcurses_dep
+ncpp = ncpp_dep
+
+# ft: dosini

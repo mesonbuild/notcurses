@@ -1,0 +1,11 @@
+option('dfsg', type: 'boolean', value: false, description: 'DFSG build (include no non-free media/code)')
+option('use_doctest', type: 'boolean', value: true, description: 'build notcurses-tester with doctest')
+option('use_doxygen', type: 'boolean', value: false, description: 'build HTML cross reference with doxygen')
+option('use_pandoc', type: 'boolean', value: true, description: 'build man pages and HTML reference with pandoc')
+option('use_poc', type: 'boolean', value: true, description: 'build small, uninstalled proof-of-concept binaries')
+option('use_qrcodegen', type: 'boolean', value: true, description: 'enable libqrcodegen QR code support')
+option('use_multimedia', type: 'combo', choices: ['ffmpeg', 'oiio', 'none'],
+       description: 'multimedia engine, one of \'ffmpeg\', \'oiio\', or \'none\'')
+
+# EXCLUDED OPTIONS:
+# - use_coverage: already a part of meson ('b_coverage')
